@@ -6,7 +6,7 @@
   </h3>
 
 <br>
-<h5>I am using Free API Key on http://www.omdbapi.com/apikey.aspx. Search for movies and TV shows.</h5>
+<h5>I am using Free API Key on http://www.omdbapi.com/ Search for movies and TV shows.</h5>
 
 ## Working Senario
    <h5> when we come to first page there is a search box where we can put movie or Tv Shows name and we need to click on search and will get the reasult as we put the querry. after that we have "Add to " button with that we can add particuler movie in to our favourite list and we can see those movies or shows by clicking on "favourite"</h5>
