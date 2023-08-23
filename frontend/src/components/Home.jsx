@@ -3,6 +3,9 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Home = () => {
   
   const [ search, setSearch]= useState('')
@@ -33,14 +36,18 @@ const Home = () => {
   }
 
    const addToFavorites = (postdata) => {
-      console.log(postdata)
+    
+  
      axios.post("http://localhost:5000/api/favorite",postdata)
         .then(response => {
           const newFavorite = response;
           console.log(newFavorite)
+          toast.success("Added to ❤️")
         })
         .catch(error => {
           console.error(error);
+          toast.error('Somthing is wrong')
+        
         })
 
     };
@@ -75,6 +82,7 @@ const Home = () => {
         </div>
 }
  </div>
+ <ToastContainer />
 </div>
   )
 }
